@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
-import ContextMenuTrigger from 'src/ContextMenuTrigger';
-import ContextMenu from 'src/ContextMenu';
 import MenuItem from 'src/MenuItem';
+
+const ContextMenu = require('src/ContextMenu');
+const ContextMenuTrigger = require('src/ContextMenuTrigger');
 
 const MENU_1 = 'MENU_1';
 const MENU_2 = 'MENU_2';

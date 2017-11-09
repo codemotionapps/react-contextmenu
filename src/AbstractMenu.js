@@ -25,32 +25,10 @@ export default class AbstractMenu extends Component {
             return;
         }
 
-        switch (e.keyCode) {
-            case 37: // left arrow
-            case 27: // escape
-                e.preventDefault();
-                this.hideMenu(e);
-                break;
-            case 38: // up arrow
-                e.preventDefault();
-                this.selectChildren(true);
-                break;
-            case 40: // down arrow
-                e.preventDefault();
-                this.selectChildren(false);
-                break;
-            case 39: // right arrow
-                this.tryToOpenSubMenu(e);
-                break;
-            case 13: // enter
-                e.preventDefault();
-                this.tryToOpenSubMenu(e);
-                if (this.seletedItemRef && this.seletedItemRef.ref instanceof HTMLElement) {
-                    this.seletedItemRef.ref.click();
-                }
-                break;
-            default:
-                // do nothing
+        if (e.keyCode === 27) {
+            e.preventDefault();
+            e.stopPropagation();
+            this.hideMenu(e);
         }
     }
 

@@ -6,7 +6,7 @@ import assign from 'object-assign';
 import { showMenu, hideMenu } from './actions';
 import { callIfExists, cssClasses } from './helpers';
 
-export default class ContextMenuTrigger extends Component {
+module.exports = class ContextMenuTrigger extends Component {
     static propTypes = {
         id: PropTypes.string.isRequired,
         children: PropTypes.node.isRequired,
@@ -136,4 +136,4 @@ export default class ContextMenuTrigger extends Component {
 
         return React.createElement(renderTag, newAttrs, children);
     }
-}
+};

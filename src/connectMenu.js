@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
-import ContextMenuTrigger from './ContextMenuTrigger';
 import listener from './globalEventListener';
+
+const ContextMenuTrigger = require('./ContextMenuTrigger');
 
 // collect ContextMenuTrigger's expected props to NOT pass them on as part of the context
 const ignoredTriggerProps = [...Object.keys(ContextMenuTrigger.propTypes), 'children'];

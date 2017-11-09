@@ -1,8 +1,9 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import ContextMenu from '../src/ContextMenu';
 import { showMenu, hideMenu } from '../src/actions';
+
+const ContextMenu = require('../src/ContextMenu');
 
 describe('ContextMenu tests', () => {
     test('shows when event with correct "id" is triggered', () => {

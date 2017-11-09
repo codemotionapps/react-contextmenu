@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import ContextMenuTrigger from 'src/ContextMenuTrigger';
-import ContextMenu from 'src/ContextMenu';
 import MenuItem from 'src/MenuItem';
 import connectMenu from 'src/connectMenu';
+
+const ContextMenu = require('src/ContextMenu');
+const ContextMenuTrigger = require('src/ContextMenuTrigger');
 
 const MENU_TYPE = 'DYNAMIC';
 

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
-import ContextMenuTrigger from 'src/ContextMenuTrigger';
-import ContextMenu from 'src/ContextMenu';
 import MenuItem from 'src/MenuItem';
 import SubMenu from 'src/SubMenu';
+
+const ContextMenu = require('src/ContextMenu');
+const ContextMenuTrigger = require('src/ContextMenuTrigger');
 
 const MENU_TYPE = 'RTL';
 

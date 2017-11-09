@@ -9,7 +9,7 @@ import SubMenu from './SubMenu';
 import { hideMenu } from './actions';
 import { cssClasses, callIfExists, store } from './helpers';
 
-export default class ContextMenu extends AbstractMenu {
+module.exports = class ContextMenu extends AbstractMenu {
     static propTypes = {
         id: PropTypes.string.isRequired,
         children: PropTypes.node.isRequired,
@@ -196,4 +196,4 @@ export default class ContextMenu extends AbstractMenu {
             </nav>
         );
     }
-}
+};

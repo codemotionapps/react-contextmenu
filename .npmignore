@@ -4,6 +4,7 @@ scripts/
 tests/
 .travis/
 .editorconfig
+.eslintignore
 .eslintrc.yml
 .travis.yml
 ISSUE_TEMPLATE.md

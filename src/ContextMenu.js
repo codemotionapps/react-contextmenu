@@ -192,7 +192,7 @@ module.exports = class ContextMenu extends AbstractMenu {
             <nav
                 role='menu' tabIndex='-1' ref={this.menuRef} style={style} className={menuClassnames}
                 onContextMenu={this.handleContextMenu} onMouseLeave={this.handleMouseLeave}>
-                {this.renderChildren(children)}
+                {children}
             </nav>
         );
     }

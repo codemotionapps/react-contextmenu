@@ -89,30 +89,4 @@ export default class AbstractMenu extends Component {
     onChildMouseLeave = () => {
         this.setState({ selectedItem: null, forceSubMenuOpen: false });
     }
-
-    renderChildren = children => React.Children.map(children, (child) => {
-        const props = {};
-        if (!React.isValidElement(child)) return child;
-        if ([MenuItem, this.getSubMenuType()].indexOf(child.type) < 0) {
-            // Maybe the MenuItem or SubMenu is capsuled in a wrapper div or something else
-            props.children = this.renderChildren(child.props.children);
-            return React.cloneElement(child, props);
-        }
-        props.onMouseLeave = this.onChildMouseLeave.bind(this);
-        if (child.type === this.getSubMenuType()) {
-            // special props for SubMenu only
-            props.forceOpen = this.state.forceSubMenuOpen && (this.state.selectedItem === child);
-            props.forceClose = this.handleForceClose;
-            props.parentKeyNavigationHandler = this.handleKeyNavigation;
-        }
-        if (!child.props.divider && this.state.selectedItem === child) {
-            // special props for selected item only
-            props.selected = true;
-            props.ref = (ref) => { this.seletedItemRef = ref; };
-            return React.cloneElement(child, props);
-        }
-        // onMouseMove is only needed for non selected items
-        props.onMouseMove = () => this.onChildMouseMove(child);
-        return React.cloneElement(child, props);
-    });
 }

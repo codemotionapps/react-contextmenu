@@ -1,43 +1,16 @@
 {
     "presets": [
+        ["env", {
+            "targets": {
+                "browsers": [
+                    "last 2 versions",
+                    "> 1%"
+                ]
+            }
+        }],
         "react"
     ],
-    "env": {
-        "es6": {
-            "presets": [
-                [
-                    "es2015",
-                    {
-                        "modules": false
-                    }
-                ]
-            ],
-            "plugins": [
-                "transform-class-properties"
-            ]
-        },
-        "es5": {
-            "presets": [
-                "es2015"
-            ],
-            "plugins": [
-                "transform-class-properties"
-            ]
-        },
-        "test": {
-            "presets": [
-                [
-                    "env",
-                    {
-                        "targets": {
-                            "node": 6
-                        }
-                    }
-                ]
-            ],
-            "plugins": [
-                "transform-class-properties"
-            ]
-        }
-    }
+    "plugins": [
+        "transform-class-properties"
+    ]
 }

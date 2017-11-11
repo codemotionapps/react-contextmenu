@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 
-import MenuItem from 'src/MenuItem';
-import SubMenu from 'src/SubMenu';
-
+const MenuItem = require('src/MenuItem');
+const SubMenu = require('src/SubMenu');
 const ContextMenu = require('src/ContextMenu');
 const ContextMenuTrigger = require('src/ContextMenuTrigger');
 

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 
-import MenuItem from 'src/MenuItem';
-
-const ContextMenu = require('src/ContextMenu');
-const ContextMenuTrigger = require('src/ContextMenuTrigger');
+const MenuItem = require('../src/MenuItem');
+const ContextMenu = require('../src/ContextMenu');
+const ContextMenuTrigger = require('../src/ContextMenuTrigger');
 
 const MENU_TYPE = 'SIMPLE';
 

@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import cx from 'classnames';
-import assign from 'object-assign';
+const React = require('react');
+const PropTypes = require('prop-types');
+const cx = require('classnames');
+const assign = require('object-assign');
 
-import { hideMenu } from './actions';
-import { callIfExists, cssClasses, store } from './helpers';
+const { hideMenu } = require('./actions');
+const { callIfExists, cssClasses, store } = require('./helpers');
 
-export default class MenuItem extends Component {
+module.exports = class MenuItem extends React.Component {
     static propTypes = {
         children: PropTypes.node,
         attributes: PropTypes.object,
@@ -70,4 +70,4 @@ export default class MenuItem extends Component {
             </div>
         );
     }
-}
+};

@@ -1,6 +1,6 @@
 {
   "name": "@codemotion/react-contextmenu",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Context Menu implemented in React",
   "main": "src/index.js",
   "typings": "src/index.d.ts",
@@ -16,7 +16,7 @@
     "test": "npm run lint && npm run test:only",
     "test:only": "jest --no-cache --verbose --coverage",
     "test:dev": "jest --watchAll --no-cache --verbose --coverage",
-    "prepublish": "npm run test"
+    "prepare": "npm run test"
   },
   "author": "Vivek Kumar Bansal <contact@vkbansal.me>",
   "license": "MIT",

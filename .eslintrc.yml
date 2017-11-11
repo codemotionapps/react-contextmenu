@@ -8,5 +8,9 @@ rules:
     react/no-array-index-key: 0
     func-names: 0
     import/no-commonjs: 0
+    import/order: ["error", {
+        "newlines-between": "always",
+        "groups": ["internal", "external", "builtin", "index", "sibling", "parent"]
+    }]
     global-require: 0
     arrow-parens: 0

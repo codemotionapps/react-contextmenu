@@ -1,10 +1,9 @@
-import assign from 'object-assign';
+const assign = require('object-assign');
 
-import { store } from './helpers';
+const { store } = require('./helpers');
 
 export const MENU_SHOW = 'REACT_CONTEXTMENU_SHOW';
 export const MENU_HIDE = 'REACT_CONTEXTMENU_HIDE';
-
 
 export function dispatchGlobalEvent(eventName, opts, target = window) {
   // Compatibale with IE

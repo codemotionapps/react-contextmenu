@@ -1,7 +1,7 @@
-import { MENU_SHOW, MENU_HIDE } from './actions';
-import { uniqueId, hasOwnProp, canUseDOM } from './helpers';
+const { MENU_SHOW, MENU_HIDE } = require('./actions');
+const { uniqueId, hasOwnProp, canUseDOM } = require('./helpers');
 
-class GlobalEventListener {
+module.exports = new class GlobalEventListener {
     constructor() {
         this.callbacks = {};
 
@@ -39,6 +39,4 @@ class GlobalEventListener {
             delete this.callbacks[id];
         }
     }
-}
-
-export default new GlobalEventListener();
+}();

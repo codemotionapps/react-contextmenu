@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import cx from 'classnames';
-import assign from 'object-assign';
+const React = require('react');
+const PropTypes = require('prop-types');
+const cx = require('classnames');
+const assign = require('object-assign');
 
-import { showMenu, hideMenu } from './actions';
-import { callIfExists, cssClasses } from './helpers';
+const { showMenu, hideMenu } = require('./actions');
+const { callIfExists, cssClasses } = require('./helpers');
+
+const { Component } = React;
 
 module.exports = class ContextMenuTrigger extends Component {
     static propTypes = {

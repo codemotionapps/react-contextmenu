@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import MenuItem from 'src/MenuItem';
-import connectMenu from 'src/connectMenu';
-
+const MenuItem = require('src/MenuItem');
+const connectMenu = require('src/connectMenu');
 const ContextMenu = require('src/ContextMenu');
 const ContextMenuTrigger = require('src/ContextMenuTrigger');
 

@@ -1,6 +1,6 @@
 {
   "name": "@codemotion/react-contextmenu",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Context Menu implemented in React",
   "main": "src/index.js",
   "typings": "src/index.d.ts",

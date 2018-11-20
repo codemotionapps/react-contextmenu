@@ -1,15 +1,15 @@
-const React = require('react');
-const PropTypes = require('prop-types');
-const cx = require('classnames');
-const assign = require('object-assign');
+import React from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
+import assign from 'object-assign';
 
-const listener = require('./globalEventListener');
-const AbstractMenu = require('./AbstractMenu');
-const SubMenu = require('./SubMenu');
-const { hideMenu } = require('./actions');
-const { cssClasses, callIfExists, store } = require('./helpers');
+import listener from './globalEventListener';
+import AbstractMenu from './AbstractMenu';
+import SubMenu from './SubMenu';
+import { hideMenu } from './actions';
+import { cssClasses, callIfExists, store } from './helpers';
 
-module.exports = class ContextMenu extends AbstractMenu {
+export default class ContextMenu extends AbstractMenu {
     static propTypes = {
         id: PropTypes.string.isRequired,
         children: PropTypes.node.isRequired,
@@ -196,4 +196,4 @@ module.exports = class ContextMenu extends AbstractMenu {
             </nav>
         );
     }
-};
+}

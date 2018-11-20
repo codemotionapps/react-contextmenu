@@ -1,11 +1,11 @@
-const PropTypes = require('prop-types');
-const React = require('react');
+import PropTypes from 'prop-types';
+import React from 'react';
 
-const MenuItem = require('./MenuItem');
+import MenuItem from './MenuItem';
 
 const { Component } = React;
 
-module.exports = class AbstractMenu extends Component {
+export default class AbstractMenu extends Component {
     static propTypes = {
         children: PropTypes.node.isRequired
     };
@@ -91,4 +91,4 @@ module.exports = class AbstractMenu extends Component {
     onChildMouseLeave = () => {
         this.setState({ selectedItem: null, forceSubMenuOpen: false });
     }
-};
+}

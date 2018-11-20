@@ -1,7 +1,7 @@
-const React = require('react');
+import React from 'react';
 
-const listener = require('./globalEventListener');
-const ContextMenuTrigger = require('./ContextMenuTrigger');
+import listener from './globalEventListener';
+import ContextMenuTrigger from './ContextMenuTrigger';
 
 const { Component } = React;
 
@@ -9,7 +9,7 @@ const { Component } = React;
 const ignoredTriggerProps = [...Object.keys(ContextMenuTrigger.propTypes), 'children'];
 
 // expect the id of the menu to be responsible for as outer parameter
-module.exports = function (menuId) {
+export default function (menuId) {
     // expect menu component to connect as inner parameter
     // <Child/> is presumably a wrapper of <ContextMenu/>
     return function (Child) {
@@ -55,4 +55,4 @@ module.exports = function (menuId) {
             }
         };
     };
-};
+}

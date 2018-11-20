@@ -1,14 +1,14 @@
-const React = require('react');
-const PropTypes = require('prop-types');
-const cx = require('classnames');
-const assign = require('object-assign');
+import React from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
+import assign from 'object-assign';
 
-const { showMenu, hideMenu } = require('./actions');
-const { callIfExists, cssClasses } = require('./helpers');
+import { showMenu, hideMenu } from './actions';
+import { callIfExists, cssClasses } from './helpers';
 
 const { Component } = React;
 
-module.exports = class ContextMenuTrigger extends Component {
+export default class ContextMenuTrigger extends Component {
     static propTypes = {
         id: PropTypes.string.isRequired,
         children: PropTypes.node.isRequired,
@@ -138,4 +138,4 @@ module.exports = class ContextMenuTrigger extends Component {
 
         return React.createElement(renderTag, newAttrs, children);
     }
-};
+}

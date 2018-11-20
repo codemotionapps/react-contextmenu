@@ -1,6 +1,6 @@
-const assign = require('object-assign');
+import assign from 'object-assign';
 
-const { store } = require('./helpers');
+import { store } from './helpers';
 
 export const MENU_SHOW = 'REACT_CONTEXTMENU_SHOW';
 export const MENU_HIDE = 'REACT_CONTEXTMENU_HIDE';
